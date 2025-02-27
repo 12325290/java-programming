@@ -1,5 +1,7 @@
 import java.util.Scanner;
 public class Question2{
+    // Finding greatest number between three user inputs.
+    
     public static void main(String[] args) {
         Scanner sc = new Scanner (System.in);
         int num1 = sc.nextInt();
