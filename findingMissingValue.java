@@ -1,8 +1,9 @@
+// Finding the Missing Number in an Array
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class reverseNum {
+
+class findingMissingValue {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter array size: ");
@@ -14,18 +15,12 @@ public class reverseNum {
             array[i] = scanner.nextInt();
         }
 
-        int left = 0;
-        int right = size - 1;
-        while (left < right) {
-            int temp = array[left];
-            array[left] = array[right];
-            array[right] = temp;
-            left++;
-            right--;
+        int sum = (size + 1) * (size + 2) / 2;
+        int actualSum = 0;
+        for (int num : array) {
+            actualSum += num;
         }
 
-        System.out.println("Reversed array: " + Arrays.toString(array));
+        System.out.println("Missing number: " + (sum - actualSum));
     }
 }
-
-

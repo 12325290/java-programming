@@ -1,8 +1,7 @@
-
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class reverseNum {
+public class removingDuplicateElements {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter array size: ");
@@ -14,18 +13,17 @@ public class reverseNum {
             array[i] = scanner.nextInt();
         }
 
-        int left = 0;
-        int right = size - 1;
-        while (left < right) {
-            int temp = array[left];
-            array[left] = array[right];
-            array[right] = temp;
-            left++;
-            right--;
+        Arrays.sort(array);
+        int j = 0;
+        for (int i = 1; i < size; i++) {
+            if (array[i] != array[j]) {
+                j++;
+                array[j] = array[i];
+            }
         }
 
-        System.out.println("Reversed array: " + Arrays.toString(array));
+        int[] result = Arrays.copyOfRange(array, 0, j + 1);
+        System.out.println("Array without duplicates: " + Arrays.toString(result));
     }
 }
-
 
