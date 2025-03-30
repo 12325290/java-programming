@@ -29,3 +29,24 @@ public class reverseNum {
 }
 
 
+
+
+
+// import java.util.*;
+
+// public class Main {
+//     public static void main(String[] args) {
+//         int[] arr = {1, 2, 3, 4, 5, 6, 7};
+
+//         for (int left = 0, right = arr.length - 1; left < right; left++, right--) {
+//             int temp = arr[left];
+//             arr[left] = arr[right];
+//             arr[right] = temp;
+//         }
+
+//         // Print the reversed array
+//         System.out.println(Arrays.toString(arr));
+//     }
+// }
+
+
